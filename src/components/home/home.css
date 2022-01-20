@@ -1,0 +1,28 @@
+.home {
+    font-family: 'Product Sans1', sans-serif;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    );
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    height: 871px;
+    background-color: transparent;
+    color: #6b6b6b;
+    outline: 0;
+}
+
+.home a, .home a:hover, .home a:focus, .home a:active, .home  a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+.home h1 {
+    padding-top: 15%;
+    color: white;
+    font-size: 500%;
+    user-select: none;
+    user-focus: none;
+}
