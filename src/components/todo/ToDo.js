@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./todo.css"
 import Cookies from 'js-cookie'
-import {buildTimeValue} from "@testing-library/user-event/dist/utils";
 
 const cookiePath = "todo/"
 const viewPath = cookiePath + "view"

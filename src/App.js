@@ -1,9 +1,9 @@
 import logo from "./logo.svg"
 import * as React from "react";
-import {Nav, Navbar, NavDropdown} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css'
-import "./App.css"
-import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom"
+import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import ToDo from "./components/todo/ToDo"
 import Home from "./components/home/Home"
@@ -22,7 +22,7 @@ function App() {
               <Navbar.Toggle className={"toggle"} />
               <Navbar.Collapse className={"collapse"}>
                   <Nav>
-                      <NavDropdown menuVariant={"dark"} title={"Social"}>
+                      <NavDropdown menuVariant={"dark"} title={"Social"} id={"social"}>
                           <NavDropdown.Item href={"https://mail.google.com/mail/"}>Mail</NavDropdown.Item>
                           <NavDropdown.Item href={"https://www.youtube.com/"}>Youtube</NavDropdown.Item>
                           <NavDropdown.Item href={"https://www.twitch.tv/"}>Twitch</NavDropdown.Item>
@@ -38,12 +38,12 @@ function App() {
 
           </Navbar>
           <div className="content">
-              <Router>
+              <Router basename={"/"}>
                   <Routes>
-                      <Route path={"pomofocus"} element={<PomoFocus />} />
-                      <Route path={"todo"} element={<ToDo />} />
-                      <Route path={"tictactoe"} element={<TicTacToe />} />
                       <Route path={"*"} element={<Home />} />
+                      <Route path={"/pomofocus"} element={<PomoFocus />} />
+                      <Route path={"/todo"} element={<ToDo />} />
+                      <Route path={"/tictactoe"} element={<TicTacToe />} />
                   </Routes>
               </Router>
           </div>
